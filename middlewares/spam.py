@@ -21,5 +21,3 @@ class SpamMiddleware(BaseMiddleware):
                         await update_user_status(session, uid, is_banned=True, banned_until=datetime.utcnow()+timedelta(hours=1))
                 return
         return await handler(event, data)
-
-        
