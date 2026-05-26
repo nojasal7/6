@@ -2,7 +2,6 @@ from sqlalchemy.ext.asyncio import create_async_engine, async_sessionmaker
 from .models import Base
 
 def get_engine(url: str):
-    # SQLAlchemy automatically detects "sqlite+aiosqlite" and handles it
     return create_async_engine(url)
 
 def get_sessionmaker(eng):
